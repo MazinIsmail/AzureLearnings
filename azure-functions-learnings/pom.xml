@@ -40,6 +40,12 @@
             <version>3.3.3</version>
             <scope>test</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>com.microsoft</groupId>
+            <artifactId>durabletask-azure-functions</artifactId>
+            <version>1.4.0</version>
+        </dependency>
     </dependencies>
 
     <build>
