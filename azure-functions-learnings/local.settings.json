@@ -1,0 +1,8 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "",
+        "FUNCTIONS_WORKER_RUNTIME": "java",
+        "LEARNING_schedule_cron": "0 */1 * * * *"
+    }
+}
