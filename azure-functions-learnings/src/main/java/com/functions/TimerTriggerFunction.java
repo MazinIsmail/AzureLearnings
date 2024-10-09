@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 /**
  * Azure Functions with Timer trigger.
  * https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-timer?tabs=java
+ *
+ * Time trigger will only work when you associate your function when running with a storage account.
+ * Time trigger requires a storage account to run.
  */
 public class TimerTriggerFunction {
     /**
@@ -17,7 +20,7 @@ public class TimerTriggerFunction {
      */
     @FunctionName("TimerTrigger")
     public void timerHandler(
-        @TimerTrigger(name = "timerInfo", schedule = "0 */1 * * * *") String timerInfo,
+        @TimerTrigger(name = "timerInfo", schedule = "%LEARNING_schedule_cron%") String timerInfo,
         final ExecutionContext context) {
         context.getLogger().info("Java Timer trigger function executed at: " + LocalDateTime.now());
     }
